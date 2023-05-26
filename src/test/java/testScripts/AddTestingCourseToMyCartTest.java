@@ -18,14 +18,18 @@ import genericLibraries.BaseClass;
 	   home.clickGearsTab();
 	   home.clickSkillaryDemoApp();
 	   web.handleChildBrowser();
-	   soft.assertTrue(demoApp.getLogotext().contains("Ecommerce"));
+	   
+	   soft.assertTrue(demoApp.getLogotext().contains("ECommerce"));
 	   demoApp.selectcategory(web, 1);
-	   soft.assertEquals(testing.getPageHeader(), "Testing ");
+	   
+	   soft.assertEquals(testing.getPageHeader(), "Testing");
+	   
 	   web.scrollToElement(testing.getPythonImage());
 	   web.dragAndDropElement(testing.getPythonImage(),testing.getMyCart());
 	   
 	   web.scrollToElement(testing.getFacebookIcon());
 	   testing.clickFacebook();
+	   
      soft.assertAll();	   
    }
 	
