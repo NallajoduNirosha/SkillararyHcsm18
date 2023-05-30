@@ -52,10 +52,10 @@ public class ContactUspage
 	 * @param subject
 	 * @param message
 	 */
-	public void sendDetails(String fullname,String email,String subject,String message)
+	public void sendDetails(String fullname,String username,String subject,String message)
 	{
 		fullNameTF.sendKeys(fullname);
-		emailTF.sendKeys(email);
+		emailTF.sendKeys(username);
 		subjectTF.sendKeys(subject);
 		messageTextArea.sendKeys(message);
 		sendUsMailButton.click();

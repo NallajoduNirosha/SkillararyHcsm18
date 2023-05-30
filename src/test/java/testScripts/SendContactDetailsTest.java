@@ -17,14 +17,14 @@ public class SendContactDetailsTest extends BaseClass
 		 home.clickGearsTab();
 		 home.clickSkillaryDemoApp();
 		 web.handleChildBrowser();
-		 soft.assertTrue(demoApp.getLogotext().contains("Ecommerce"));
+		 soft.assertTrue(demoApp.getLogotext().contains("ECommerce"));
 		 
 		 web.scrollToElement(demoApp.getContactUs());
 		 demoApp.clickContactUs();
 		 
 		 soft.assertTrue(contact.getPageLogo().isDisplayed());
 		Map<String,String>map= excel.readDataFromExcel("Sheet1");
-		contact.sendDetails(map.get("FullName"),map.get("Email"),map.get("Subject"),map.get("Message"));
+		contact.sendDetails(map.get("FullName"),map.get("Username"),map.get("Subject"),map.get("Message"));
 		soft.assertAll();
 		
 	}
